@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Audio Project</title>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="contanier">
+          <div class="navber">
+               <img src="img/logo.png" alt="" class="logo">
+               <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Specification</a></li>
+                    <li><a href="#">Produtcs</a></li>
+                    <li><a href="#">Connect</a></li>
+               </ul>
+          </div>
+          <div class="content">
+               <div class="left-col">
+                    <h1>THE <br> REAL <br> SOUND</h1>
+               </div>
+               <div class="right-col">
+                    <p>Click  Here To Listen</p>
+                    <img src="img/play.png" alt="play" id="icon">
+               </div>
+          </div>
+     </div>
+     <audio id="mySong">
+          <source src="img/meri.mp3" type="audio/mp3">
+     </audio>
+     <script>
+          var mySong = document.getElementById("mySong");
+          var icon = document.getElementById("icon");
+          icon.onclick = function () {
+               if(mySong.paused){
+                    mySong.play();
+                    icon.src ="img/pause.png"
+               }else{
+                    mySong.pause();
+                    icon.src ="img/play.png"
+               };
+          }
+     </script>
+</body>
+</html>
